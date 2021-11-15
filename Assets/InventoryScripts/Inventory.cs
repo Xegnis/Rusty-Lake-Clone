@@ -4,8 +4,29 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+   public static Inventory instance;
+
    public Item[] itemList = new Item[6];
-   public List<InventorySlot> inventorySlots = new List<InventorySlot>();
+   public InventorySlot[] inventorySlots;
+
+   void Awake()
+   {
+       if(instance == null)
+       {
+           instance = this;
+       }
+       else if (instance != this)
+       {
+           Destroy(this);
+       }
+       DontDestroyOnLoad(this);
+   }
+
+   void Start()
+   {
+       inventorySlots = FindObjectsOfType<InventorySlot>();
+       UpdateSlotUI();
+   }
 
    private bool Add(Item item)
    {
@@ -14,6 +35,7 @@ public class Inventory : MonoBehaviour
            if(itemList[i] == null)
            {
                itemList[i] = item; //find empty slot
+           
                return true;
            }
        }
@@ -21,7 +43,7 @@ public class Inventory : MonoBehaviour
    }
   
     public void UpdateSlotUI(){
-        for(int i = 0; i< inventorySlots.Count; i++)
+        for(int i = 0; i< inventorySlots.Length ; i++)
         {
             inventorySlots[i].UpdateSlot();
         }

@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
-    public Item item;
+   
     public GameObject icon;
 
     public void UpdateSlot()
     {
-        if(item !=null)
+        if(Inventory.instance.itemList[transform.GetSiblingIndex()] !=null)
         {
-            icon.GetComponent<Image>().sprite = item.icon;
+            icon.GetComponent<Image>().sprite = Inventory.instance.itemList[transform.GetSiblingIndex()].icon;
             icon.SetActive(true);
         }
         else
