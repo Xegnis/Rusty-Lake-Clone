@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class Interactable : MonoBehaviour
+public class InteractableObject : MonoBehaviour
 {
     [SerializeField]
     bool interactive;

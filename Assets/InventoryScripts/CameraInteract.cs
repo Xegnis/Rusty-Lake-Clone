@@ -8,7 +8,7 @@ public class CameraInteract : MonoBehaviour
 
     private void Start()
     {
-        screenCamera = GetCompoent<Camera>();
+        screenCamera = GetComponent<Camera>();
     }
 
     private void Update()
@@ -19,9 +19,10 @@ public class CameraInteract : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                if(hit.collider.GetCompoent<Interactable>() != null)
+                Interactable interactable = hit.collider.GetComponent<Interactable>();
+                if (interactable != null)
                 {
-                    hit.collider.GetCompoent<Interactable>().interact();
+                    interactable.Interact();
                 }
             }
 
