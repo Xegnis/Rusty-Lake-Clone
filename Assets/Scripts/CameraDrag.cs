@@ -34,14 +34,14 @@ public class CameraDrag : MonoBehaviour
             targetPosition = origin - difference;
             if (targetPosition.x >= -3 && targetPosition.x <= 6.79)
             {
-                Camera.main.transform.position = targetPosition;
+                Camera.main.transform.position = new Vector3(targetPosition.x, 0, -10);
             }
             else if (targetPosition.x <= -3)
             {
-                Camera.main.transform.position = new Vector3(-3, 0, 0);
+                Camera.main.transform.position = new Vector3(-3, 0, -10);
             }
             else if (targetPosition.x >= 6.79) {
-                Camera.main.transform.position = new Vector3(6.79f, 0, 0);
+                Camera.main.transform.position = new Vector3(6.79f, 0, -10);
             }
         }
     }
