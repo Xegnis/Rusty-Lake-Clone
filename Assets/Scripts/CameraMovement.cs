@@ -28,6 +28,8 @@ public class CameraMovement : MonoBehaviour
 
     float startMouseX, startCameraX;
 
+    public bool canDrag = true;
+
     void Start()
     {
         startCameraX = transform.position.x;
@@ -36,21 +38,21 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && canDrag)
         {
             targetX = transform.position.x;
             startMouseX = Input.mousePosition.x;
             startCameraX = transform.position.x;
         }
 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) && canDrag)
         {
             float xDiff = (Input.mousePosition.x - startMouseX) * dragSpeed / Screen.currentResolution.width;
             targetX = startCameraX - xDiff;
             toMove = true;
         }
 
-        if ((transform.position.x - leftBound.position.x) < 0.2)
+        if ((transform.position.x - leftBound.position.x) < 0.2 || FadeOut.layer > 0)
         {
             hideArrow(leftArrow);
         }
@@ -59,7 +61,7 @@ public class CameraMovement : MonoBehaviour
             showArrow(leftArrow);
         }
 
-        if ((rightBound.position.x - transform.position.x) < 0.2)
+        if ((rightBound.position.x - transform.position.x) < 0.2 || FadeOut.layer > 0)
         {
             hideArrow(rightArrow);
         }

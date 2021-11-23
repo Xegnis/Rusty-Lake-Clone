@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ripple : MonoBehaviour
 {
-    SpriteRenderer spr;
+    Image i;
 
     [SerializeField]
     float minimum, maximum, speed, offset;
@@ -13,7 +14,7 @@ public class Ripple : MonoBehaviour
 
     void Awake()
     {
-        spr = GetComponent<SpriteRenderer>();
+        i = GetComponent<Image>();
     }
 
     void Start()
@@ -29,7 +30,7 @@ public class Ripple : MonoBehaviour
         }
 
         transform.localScale = Mathf.Lerp(minimum, maximum, (-1 / t + offset)) * Vector3.one;
-        spr.color = new Color(spr.color.r, spr.color.g, spr.color.b, Mathf.Lerp(1, 0, (-1 / t + offset)));
+        i.color = new Color(i.color.r, i.color.g, i.color.b, Mathf.Lerp(1, 0, (-1 / t + offset)));
 
         t += speed * Time.deltaTime;
     }
