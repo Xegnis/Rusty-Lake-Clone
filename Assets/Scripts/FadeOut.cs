@@ -17,8 +17,8 @@ public class FadeOut : MonoBehaviour
     GameObject upDownArrrows;
 
     static bool isFading, isShowing;
-    static Transform target;
-    static Transform prevLocation;
+    static Vector3 target;
+    static Vector3 prevLocation;
 
     public static int layer;
 
@@ -26,18 +26,18 @@ public class FadeOut : MonoBehaviour
     {
         isFading = false;
         isShowing = false;
-        target = null;
-        prevLocation = null;
+        target = Camera.main.transform.position;
+        prevLocation = Camera.main.transform.position;
         layer = 0;
         blackScreen.color = new Color(blackScreen.color.r, blackScreen.color.g, blackScreen.color.b, 0);
     }
 
-    public static void ChangeScene (Transform t)
+    public static void ChangeScene (Vector3 v)
     {
-        prevLocation = Camera.main.transform;
+        prevLocation = Camera.main.transform.position;
         isFading = true;
         isShowing = false;
-        target = t;
+        target = v;
         layer++;
     }
 
@@ -49,13 +49,12 @@ public class FadeOut : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(prevLocation, Camera.main.gameObject);
         if (isFading)
         {
             blackScreen.color = new Color(blackScreen.color.r, blackScreen.color.g, blackScreen.color.b, Mathf.Min(blackScreen.color.a + blackScreenSpeed * Time.deltaTime, 1));
             if (blackScreen.color.a >= 1.0f)
             {
-                Camera.main.transform.position = target.position;
+                Camera.main.transform.position = target;
                 if (layer == 0)
                 {
                     upDownArrrows.SetActive(false);

@@ -280,6 +280,10 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1829927449}
+    - target: {fileID: 5210660874973168370, guid: 2bd6461ccad101e499baa472beb635f1, type: 3}
+      propertyPath: clickSound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5210660874973168372, guid: 2bd6461ccad101e499baa472beb635f1, type: 3}
       propertyPath: center
       value: 

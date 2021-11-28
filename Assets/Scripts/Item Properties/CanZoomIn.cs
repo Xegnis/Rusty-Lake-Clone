@@ -10,14 +10,22 @@ public class CanZoomIn : MonoBehaviour
 
     public bool canZoomIn  {get; set;}
 
+    Vector3 clickPos;
+
     void Start()
     {
         canZoomIn = true;
     }
 
+    void OnMouseDown()
+    {
+        clickPos = Input.mousePosition;
+    }
+
     void OnMouseUp()
     {
-        if (canZoomIn)
-            FadeOut.ChangeScene(location);
+        if ((Input.mousePosition - clickPos).magnitude <= (Screen.currentResolution.width / 20.0f))
+            if (canZoomIn)
+                FadeOut.ChangeScene(location.position);
     }
 }
