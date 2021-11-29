@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class FadeOut : MonoBehaviour
 {
+    [SerializeField]
+    CameraMovement camMov;
+
     [Header("Black Screen")]
     [SerializeField]
     Image blackScreen;
@@ -54,6 +57,7 @@ public class FadeOut : MonoBehaviour
             blackScreen.color = new Color(blackScreen.color.r, blackScreen.color.g, blackScreen.color.b, Mathf.Min(blackScreen.color.a + blackScreenSpeed * Time.deltaTime, 1));
             if (blackScreen.color.a >= 1.0f)
             {
+                camMov.stopCamera();
                 Camera.main.transform.position = target;
                 if (layer == 0)
                 {

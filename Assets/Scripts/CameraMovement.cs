@@ -100,6 +100,11 @@ public class CameraMovement : MonoBehaviour
         toMove = true;
     }
 
+    public void stopCamera ()
+    {
+        toMove = false;
+    }
+
     void hideArrow (Image arrow)
     {
         arrow.color = new Color(arrow.color.r, arrow.color.g, arrow.color.b, Mathf.Max(arrow.color.a - 1.5f * Time.deltaTime, 0));
