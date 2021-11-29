@@ -32,13 +32,13 @@ public class CameraDrag : MonoBehaviour
 
         if (drag) {
             targetPosition = origin - difference;
-            if (targetPosition.x >= -3 && targetPosition.x <= 6.79)
+            if (targetPosition.x >= -1 && targetPosition.x <= 6.79)
             {
                 Camera.main.transform.position = new Vector3(targetPosition.x, 0, -10);
             }
-            else if (targetPosition.x <= -3)
+            else if (targetPosition.x <= -1)
             {
-                Camera.main.transform.position = new Vector3(-3, 0, -10);
+                Camera.main.transform.position = new Vector3(-1, 0, -10);
             }
             else if (targetPosition.x >= 6.79) {
                 Camera.main.transform.position = new Vector3(6.79f, 0, -10);
