@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b82c367f9f393c04d863e444f15b4561, type: 3}
-  m_Name: item
+  m_Name: greenball
   m_EditorClassIdentifier: 
-  name: pink circle
-  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  name: greenball
+  icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   isDefaultItem: 0

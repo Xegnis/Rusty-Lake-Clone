@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemPickUp : Interactable {
 
   public Item item; 
+  
 
     public override void Interact()
     {
@@ -13,10 +14,17 @@ public class ItemPickUp : Interactable {
         PickUp();
     
     }
+
+    void OnMouseDown(){
+      Debug.Log("Pick");
+      
+      PickUp();
+
+    }
   
-   void Update ()
+   /*void Update ()
  {
-   if( Input.GetMouseButtonDown(0) )
+   if(Input.GetMouseButtonDown(0) )
    {
      Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
  
@@ -28,7 +36,7 @@ public class ItemPickUp : Interactable {
      }
    }
  }
-
+*/
     void PickUp()
     {
       Debug.Log("Picking up item");
