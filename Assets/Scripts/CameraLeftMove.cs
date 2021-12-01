@@ -40,14 +40,14 @@ public class CameraLeftMove : MonoBehaviour
         }
 
         if (pos == 1) {
-            targetPosition = new Vector3(-3, 0, -10);
+            targetPosition = new Vector3(-1, 0, -10);
 
             if (toMove && onPos)
             {
 
                 MoveCamera();
                 leftButton.SetActive(false);
-                if (transform.position.x <= -2.9)
+                if (transform.position.x <= -0.9)
                 {
                     toMove = false;
                     onPos = true;

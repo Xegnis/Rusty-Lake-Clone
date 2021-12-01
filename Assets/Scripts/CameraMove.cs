@@ -27,7 +27,7 @@ public class CameraMove : MonoBehaviour
             rightButton.SetActive(true);
         }
 
-        if (transform.position.x <= -2.9) {
+        if (transform.position.x <= -0.9) {
             pos = 0;        
         }
 
