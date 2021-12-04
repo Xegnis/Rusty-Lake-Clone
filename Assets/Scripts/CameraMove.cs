@@ -14,11 +14,19 @@ public class CameraMove : MonoBehaviour
     public int pos = 1;
 
 
+<<<<<<< Updated upstream
     public void ToMove() {
         toMove = true;
     
     }
 
+=======
+    public void ToMove()
+    {
+        toMove = true;
+
+    }
+>>>>>>> Stashed changes
 
     public void MoveCamera()
     {
