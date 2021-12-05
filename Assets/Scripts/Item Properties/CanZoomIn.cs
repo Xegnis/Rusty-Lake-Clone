@@ -31,9 +31,12 @@ public class CanZoomIn : MonoBehaviour
             if (canZoomIn)
             {
                 FadeOut.ChangeScene(location.position);
-                foreach (OnChangeScene obj in enableObjects)
+                if (enableObjects != null)
                 {
-                    obj.InvokeChangeScene();
+                    foreach (OnChangeScene obj in enableObjects)
+                    {
+                        obj.InvokeChangeScene();
+                    }
                 }
             }
     }
