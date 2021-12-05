@@ -35,7 +35,8 @@ public class CanZoomIn : MonoBehaviour
                 {
                     foreach (OnChangeScene obj in enableObjects)
                     {
-                        obj.InvokeChangeScene();
+                        if (obj != null)
+                            obj.InvokeChangeScene();
                     }
                 }
             }
