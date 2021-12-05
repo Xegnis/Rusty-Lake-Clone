@@ -8,6 +8,9 @@ public class CanZoomIn : MonoBehaviour
     [SerializeField]
     Transform location;
 
+    [SerializeField]
+    OnChangeScene[] enableObjects;
+
     public bool canZoomIn  {get; set;}
 
     Vector3 clickPos;
@@ -26,6 +29,12 @@ public class CanZoomIn : MonoBehaviour
     {
         if ((Input.mousePosition - clickPos).magnitude <= (Screen.currentResolution.width / 20.0f))
             if (canZoomIn)
+            {
                 FadeOut.ChangeScene(location.position);
+                foreach (OnChangeScene obj in enableObjects)
+                {
+                    obj.InvokeChangeScene();
+                }
+            }
     }
 }
