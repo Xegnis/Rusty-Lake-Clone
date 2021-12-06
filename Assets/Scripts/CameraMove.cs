@@ -13,6 +13,11 @@ public class CameraMove : MonoBehaviour
     public bool onPos = true;
     public int pos = 1;
 
+    public void ToMove()
+    {
+        toMove = true;
+
+    }
 
     public void MoveCamera()
     {
