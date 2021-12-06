@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class InventorySlot : MonoBehaviour{
 
     public Image icon;
-    public Button removeButton;
+    //public Button removeButton;
     public Text itemText;
     public InventoryUI iu;
 
@@ -17,13 +17,13 @@ public class InventorySlot : MonoBehaviour{
     }
 
     public void AddItem(Item newItem){
-        Debug.Log(newItem.name);
+        //Debug.Log(newItem.name);
         item = newItem;
 
         icon.sprite = item.icon;
         icon.enabled = true;
         itemText.text = item.name;
-        removeButton.interactable = true; 
+        //removeButton.interactable = true; 
     }
 
     public void ClearSlot()
@@ -32,13 +32,14 @@ public class InventorySlot : MonoBehaviour{
 
         icon.sprite = null;
         icon.enabled = false; 
-        removeButton.interactable = false;
+        //removeButton.interactable = false;
     }
-
+    /*
     public void OnRemoveButton()
     {
         Inventory.instance.Remove(item);
     }
+    */
 
     public void UseItem()
     {
@@ -47,11 +48,13 @@ public class InventorySlot : MonoBehaviour{
             if (item != null)
             {
                 iu.currentItem = item;
+                iu.currentSlot = this;
             }
         }
         else
         {
             iu.currentItem = null;
+            iu.currentSlot = null;
         }
         //TODO: add a highlight effect
     }

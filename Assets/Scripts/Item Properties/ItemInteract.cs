@@ -7,10 +7,10 @@ using UnityEngine.Events;
 public class ItemInteract : MonoBehaviour
 {
     [SerializeField]
-    UnityEvent itemInteract;
+    UnityEvent[] itemInteract;
 
     [SerializeField]
-    Item item;
+    Item[] items;
 
     [SerializeField]
     InventoryUI iu;
@@ -20,12 +20,17 @@ public class ItemInteract : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (item == iu.currentItem)
+        for(int i = 0; i < items.Length; i ++)
         {
-            itemInteract.Invoke();
-            if (deleteItem)
-                //iu.currentItem
+            if (items[i] == iu.currentItem)
+            {
+                itemInteract[i].Invoke();
+                if (deleteItem)
+                {
+                    iu.currentItem = null;
+                    iu.currentSlot.ClearSlot();
+                }
+            }
         }
-            
     }
 }

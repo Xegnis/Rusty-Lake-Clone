@@ -6,9 +6,9 @@ public class InventoryUI : MonoBehaviour
 {
     public Transform itemsParent;
     public Item currentItem;
+    public InventorySlot currentSlot;
 
     Inventory inventory;
-
    
    List<InventorySlot> slots = new List<InventorySlot>();
    
@@ -19,12 +19,6 @@ public class InventoryUI : MonoBehaviour
 
        // slots = itemsParent.GetComponentsInChildren<InventorySlot>();
        slots = new List<InventorySlot>(itemsParent.GetComponentsInChildren<InventorySlot>());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void UpdateUI()
