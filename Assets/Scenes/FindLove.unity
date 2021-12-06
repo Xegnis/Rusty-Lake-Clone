@@ -236,6 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   location: {fileID: 1431256938}
+  enableObjects: []
 --- !u!60 &39036062
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -629,6 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   location: {fileID: 1431256938}
+  enableObjects: []
 --- !u!60 &225549012
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1580,6 +1582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   location: {fileID: 1899163590}
+  enableObjects: []
 --- !u!60 &724269034
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2437,6 +2440,9 @@ GameObject:
   - component: {fileID: 1091490939}
   - component: {fileID: 1091490938}
   - component: {fileID: 1091490937}
+  - component: {fileID: 1091490940}
+  - component: {fileID: 1091490942}
+  - component: {fileID: 1091490941}
   m_Layer: 0
   m_Name: Mary_James (2)
   m_TagString: Untagged
@@ -2524,6 +2530,64 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1091490940
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091490936}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a20a2a9c98cb5d64c8044fd96e4aff32, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1091490941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091490936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd01dee89b93fc541a811756898d00e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onChangeScene:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1091490942}
+        m_TargetAssemblyTypeName: RollEye, Assembly-CSharp
+        m_MethodName: EyeRolls
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1091490942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091490936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bc049a1a5c112748a95a98e38040a16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1144358461
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,6 +2599,9 @@ GameObject:
   - component: {fileID: 1144358464}
   - component: {fileID: 1144358463}
   - component: {fileID: 1144358462}
+  - component: {fileID: 1144358467}
+  - component: {fileID: 1144358466}
+  - component: {fileID: 1144358465}
   m_Layer: 0
   m_Name: Mary_Mary (1)
   m_TagString: Untagged
@@ -2622,6 +2689,64 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1144358465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144358461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd01dee89b93fc541a811756898d00e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onChangeScene:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1144358466}
+        m_TargetAssemblyTypeName: RollEye, Assembly-CSharp
+        m_MethodName: EyeRolls
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1144358466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144358461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bc049a1a5c112748a95a98e38040a16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1144358467
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144358461}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3d14520cf080de9459b0d4c71e5b4ca1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1159941780
 GameObject:
   m_ObjectHideFlags: 0
@@ -2735,6 +2860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   location: {fileID: 1899163590}
+  enableObjects: []
 --- !u!60 &1159941785
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3009,6 +3135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   location: {fileID: 457765412}
+  enableObjects: []
 --- !u!60 &1176585036
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3258,6 +3385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   location: {fileID: 1431256938}
+  enableObjects: []
 --- !u!61 &1426260832
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4880,6 +5008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   location: {fileID: 457765412}
+  enableObjects: []
 --- !u!60 &1953673852
 PolygonCollider2D:
   m_ObjectHideFlags: 0
