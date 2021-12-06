@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ItemPickUp : Interactable {
 
-  public Item item; 
+    public Item item; 
   
+    public bool canPickUp = true;
 
     public override void Interact()
     {
@@ -15,10 +16,12 @@ public class ItemPickUp : Interactable {
     
     }
 
-    void OnMouseDown(){
-      Debug.Log("Pick");
-      
-      PickUp();
+    void OnMouseDown()
+    {
+        //Debug.Log("Pick");
+        if (!canPickUp)
+            return;
+        PickUp();
 
     }
   
@@ -39,10 +42,11 @@ public class ItemPickUp : Interactable {
 */
     void PickUp()
     {
-      Debug.Log("Picking up item");
-      bool wasPickedUp = Inventory.instance.Add(item);
-      if(wasPickedUp)
-      Destroy(gameObject);
-       
+        //Debug.Log("Picking up item");
+        bool wasPickedUp = Inventory.instance.Add(item);
+        if (wasPickedUp)
+        {
+            Destroy(gameObject);
+        }
     }
 }
