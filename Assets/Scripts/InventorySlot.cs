@@ -8,6 +8,7 @@ public class InventorySlot : MonoBehaviour{
     public Image icon;
     public Button removeButton;
     public Text itemText;
+    public InventoryUI iu;
 
     Item item;
 
@@ -41,11 +42,18 @@ public class InventorySlot : MonoBehaviour{
 
     public void UseItem()
     {
-        if(item != null)
+        if (iu.currentItem != item)
         {
-            item.Use();
+            if (item != null)
+            {
+                iu.currentItem = item;
+            }
         }
-
+        else
+        {
+            iu.currentItem = null;
+        }
+        //TODO: add a highlight effect
     }
 
     public void OnHover(){

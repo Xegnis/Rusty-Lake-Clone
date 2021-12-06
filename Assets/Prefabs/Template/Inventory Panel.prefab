@@ -129,6 +129,7 @@ MonoBehaviour:
   icon: {fileID: 4535632877942255210}
   removeButton: {fileID: 4535632876737110051}
   itemText: {fileID: 4535632877758830025}
+  iu: {fileID: 4535632876717663047}
 --- !u!1 &4535632876717663100
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsParent: {fileID: 4535632876717663043}
+  currentItem: {fileID: 0}
 --- !u!1 &4535632876737110237
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +648,7 @@ MonoBehaviour:
   icon: {fileID: 4535632878528708462}
   removeButton: {fileID: 4535632878445564315}
   itemText: {fileID: 4535632877758830025}
+  iu: {fileID: 4535632876717663047}
 --- !u!1 &4535632876977690819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,6 +1426,7 @@ MonoBehaviour:
   icon: {fileID: 4535632877385342124}
   removeButton: {fileID: 4535632877669962681}
   itemText: {fileID: 4535632877758830025}
+  iu: {fileID: 4535632876717663047}
 --- !u!1 &4535632877596538083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,6 +1767,7 @@ MonoBehaviour:
   icon: {fileID: 4535632877596538082}
   removeButton: {fileID: 4535632877642022342}
   itemText: {fileID: 4535632877758830025}
+  iu: {fileID: 4535632876717663047}
 --- !u!1 &4535632877669962683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,6 +2466,7 @@ MonoBehaviour:
   icon: {fileID: 4535632876676361468}
   removeButton: {fileID: 4535632877451163840}
   itemText: {fileID: 4535632877758830025}
+  iu: {fileID: 4535632876717663047}
 --- !u!1 &4535632878299936390
 GameObject:
   m_ObjectHideFlags: 0
@@ -2669,6 +2675,7 @@ MonoBehaviour:
   icon: {fileID: 4535632878302254129}
   removeButton: {fileID: 4535632876737718764}
   itemText: {fileID: 4535632877758830025}
+  iu: {fileID: 4535632876717663047}
 --- !u!1 &4535632878445564309
 GameObject:
   m_ObjectHideFlags: 0

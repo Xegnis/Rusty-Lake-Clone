@@ -6,23 +6,23 @@ using UnityEngine;
 public class CanJiggle : MonoBehaviour
 {
     [SerializeField]
-    float degrees;
+    protected float degrees = 20;
     [SerializeField]
-    float speed = 30;
+    protected float speed = 30;
     [SerializeField]
-    float decay = 1.5f;
+    protected float decay = 1.5f;
 
-    float startDegree;
-    bool isRunning = false;
+    protected float startDegree;
+    protected bool isRunning = false;
 
-    void OnMouseDown()
+    protected void OnMouseDown()
     {
         if (isRunning)
             return;
         startDegree = transform.localEulerAngles.z;
         StartCoroutine(Jiggle(degrees));
     }
-    IEnumerator Jiggle (float d)
+    protected IEnumerator Jiggle (float d)
     {
         isRunning = true;
         float degree = Mathf.Lerp(transform.localEulerAngles.z, startDegree + d, speed * Time.deltaTime);
@@ -43,7 +43,7 @@ public class CanJiggle : MonoBehaviour
         isRunning = false;
     }
 
-    IEnumerator ResetD ()
+    protected IEnumerator ResetD ()
     {
         float degree = Mathf.Lerp(transform.localEulerAngles.z, startDegree, speed * Time.deltaTime);
         while (Mathf.Abs(startDegree - transform.localEulerAngles.z) > 0.1f)
