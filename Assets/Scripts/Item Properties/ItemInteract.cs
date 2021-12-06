@@ -15,17 +15,19 @@ public class ItemInteract : MonoBehaviour
     [SerializeField]
     InventoryUI iu;
 
+    public bool[] canGet;
+
     [SerializeField]
-    bool deleteItem = true;
+    bool[] deleteItem;
 
     void OnMouseDown()
     {
         for(int i = 0; i < items.Length; i ++)
         {
-            if (items[i] == iu.currentItem)
+            if (items[i] == iu.currentItem && canGet[i])
             {
                 itemInteract[i].Invoke();
-                if (deleteItem)
+                if (deleteItem[i])
                 {
                     iu.currentItem = null;
                     iu.currentSlot.ClearSlot();

@@ -12,9 +12,11 @@ public class InventorySlot : MonoBehaviour{
 
     Item item;
 
+    /*
     public void Start(){
         itemText.gameObject.SetActive(false);
     }
+    */
 
     public void AddItem(Item newItem){
         //Debug.Log(newItem.name);
@@ -48,17 +50,22 @@ public class InventorySlot : MonoBehaviour{
             if (item != null)
             {
                 iu.currentItem = item;
+                itemText.text = item.name;
                 iu.currentSlot = this;
+                Debug.Log("selected");
             }
         }
         else
         {
             iu.currentItem = null;
             iu.currentSlot = null;
+            itemText.text = "";
+            Debug.Log("deselected");
         }
         //TODO: add a highlight effect
     }
 
+    /*
     public void OnHover(){
         
          if(item != null)
@@ -75,5 +82,6 @@ public class InventorySlot : MonoBehaviour{
         }
         
     }
+    */
 }
 
