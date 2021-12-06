@@ -1582,7 +1582,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   location: {fileID: 1899163590}
-  enableObjects: []
+  enableObjects:
+  - {fileID: 1144358465}
+  - {fileID: 1091490941}
 --- !u!60 &724269034
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2860,7 +2862,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   location: {fileID: 1899163590}
-  enableObjects: []
+  enableObjects:
+  - {fileID: 1144358465}
+  - {fileID: 1091490941}
 --- !u!60 &1159941785
 PolygonCollider2D:
   m_ObjectHideFlags: 0
