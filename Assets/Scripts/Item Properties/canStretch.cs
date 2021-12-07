@@ -6,18 +6,18 @@ using UnityEngine;
 public class canStretch : MonoBehaviour
 {
     [SerializeField]
-    Vector3 stretchScale = Vector3.one;
+    protected Vector3 stretchScale = Vector3.one;
 
     [SerializeField]
-    float speed;
+    protected float speed;
 
     [SerializeField]
-    float decay;
+    protected float decay;
 
-    bool isRunning = false;
-    Vector3 startScale;
+    protected bool isRunning = false;
+    protected Vector3 startScale;
 
-    void OnMouseDown()
+    protected void OnMouseDown()
     {
         if (isRunning)
             return;
@@ -25,7 +25,7 @@ public class canStretch : MonoBehaviour
         StartCoroutine(Stretch(stretchScale));
     }
 
-    IEnumerator Stretch(Vector3 scale)
+    protected IEnumerator Stretch(Vector3 scale)
     {
         isRunning = true;
         while ((transform.localScale - scale).magnitude > 0.01f)
@@ -36,7 +36,6 @@ public class canStretch : MonoBehaviour
             transform.localScale = new Vector3(xScale, yScale, zScale);
             yield return null;
         }
-        Debug.Log(scale.magnitude);
         if ((startScale - scale).magnitude >= 0.05f)
         {
             yield return StartCoroutine(Stretch(startScale + ((startScale - scale) / decay)));
@@ -48,7 +47,7 @@ public class canStretch : MonoBehaviour
         isRunning = false;
     }
 
-    IEnumerator Rescale ()
+    protected IEnumerator Rescale ()
     {
         while ((startScale - transform.localScale).magnitude > 0.01f)
         {
