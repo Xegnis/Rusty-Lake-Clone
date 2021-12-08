@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class canStretch : MonoBehaviour
+public class CanStretch : MonoBehaviour
 {
     [SerializeField]
     protected Vector3 stretchScale = Vector3.one;
