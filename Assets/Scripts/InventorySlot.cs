@@ -52,7 +52,6 @@ public class InventorySlot : MonoBehaviour{
                 iu.currentItem = item;
                 itemText.text = item.name;
                 iu.currentSlot = this;
-                Debug.Log("selected");
             }
         }
         else
@@ -60,7 +59,6 @@ public class InventorySlot : MonoBehaviour{
             iu.currentItem = null;
             iu.currentSlot = null;
             itemText.text = "";
-            Debug.Log("deselected");
         }
         //TODO: add a highlight effect
     }
