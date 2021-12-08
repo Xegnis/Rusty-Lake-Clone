@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class RibbonStretch : canStretch
+public class RibbonStretch : CanStretch
 {
     int count = 0;
 
