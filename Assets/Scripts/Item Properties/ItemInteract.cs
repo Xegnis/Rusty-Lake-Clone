@@ -6,38 +6,19 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Collider2D))]
 public class ItemInteract : MonoBehaviour
 {
-    /*
-     * An array of events;
-     * Called when player click on the object
-     * with the correct item selected in the inventory
-    */
     [SerializeField]
     UnityEvent[] itemInteract;
 
-    /*
-     * An array of scriptable items;
-     * Determines which item is the correct item
-    */
     [SerializeField]
     Item[] items;
-
-    /*
-    * a boolean array;
-    * If the game allows this iteraction or not
-    */
-    public bool[] canGet;
-
-    /*
-    * a boolean array;
-    * If the item will be deleted or not
-    */
-    [SerializeField]
-    bool[] deleteItem;
 
     [SerializeField]
     InventoryUI iu;
 
+    public bool[] canGet;
 
+    [SerializeField]
+    bool[] deleteItem;
 
     void OnMouseDown()
     {

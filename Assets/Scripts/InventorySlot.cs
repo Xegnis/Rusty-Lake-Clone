@@ -16,7 +16,8 @@ public class InventorySlot : MonoBehaviour{
     public void Start(){
         itemText.gameObject.SetActive(false);
     }
-    */
+    **/
+    
 
     public void AddItem(Item newItem){
         //Debug.Log(newItem.name);
@@ -24,7 +25,7 @@ public class InventorySlot : MonoBehaviour{
 
         icon.sprite = item.icon;
         icon.enabled = true;
-        itemText.text = item.name;
+        //itemText.text = item.name;
         //removeButton.interactable = true; 
     }
 
@@ -52,6 +53,9 @@ public class InventorySlot : MonoBehaviour{
                 iu.currentItem = item;
                 itemText.text = item.name;
                 iu.currentSlot = this;
+                Debug.Log("selected");
+                
+                
             }
         }
         else
@@ -59,6 +63,7 @@ public class InventorySlot : MonoBehaviour{
             iu.currentItem = null;
             iu.currentSlot = null;
             itemText.text = "";
+            Debug.Log("deselected");
         }
         //TODO: add a highlight effect
     }
