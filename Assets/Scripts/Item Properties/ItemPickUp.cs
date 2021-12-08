@@ -49,4 +49,11 @@ public class ItemPickUp : Interactable {
             Destroy(gameObject);
         }
     }
+
+    public void EnablePickUp()
+    {
+        if (!canPickUp) {
+            canPickUp = true;
+        }
+    }
 }
