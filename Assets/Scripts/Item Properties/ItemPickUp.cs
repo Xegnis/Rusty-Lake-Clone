@@ -8,6 +8,10 @@ public class ItemPickUp : Interactable {
   
     public bool canPickUp = true;
 
+    public GameObject targetObject;
+    public Sprite targetSprite;
+    public bool needChange = false;
+
     public override void Interact()
     {
         base.Interact();
@@ -22,6 +26,9 @@ public class ItemPickUp : Interactable {
         if (!canPickUp)
             return;
         PickUp();
+        if (needChange) {
+            ChangeSprite();
+        }
 
     }
   
@@ -40,7 +47,7 @@ public class ItemPickUp : Interactable {
    }
  }
 */
-    void PickUp()
+    public void PickUp()
     {
         //Debug.Log("Picking up item");
         bool wasPickedUp = Inventory.instance.Add(item);
@@ -48,5 +55,18 @@ public class ItemPickUp : Interactable {
         {
             Destroy(gameObject);
         }
+    }
+
+    public void EnablePickUp()
+    {
+        if (!canPickUp) {
+            canPickUp = true;
+        }
+    }
+
+    public void ChangeSprite()
+    {
+        targetObject.GetComponent<SpriteRenderer>().sprite = targetSprite;
+        targetObject.GetComponent<Collider2D>().enabled = false;
     }
 }

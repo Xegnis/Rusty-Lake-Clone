@@ -30,7 +30,9 @@ public class ItemInteract : MonoBehaviour
                 if (deleteItem[i])
                 {
                     iu.currentItem = null;
+                    iu.currentSlot.itemText.text = "";
                     iu.currentSlot.ClearSlot();
+                    Inventory.instance.Remove(items[i]);
                 }
             }
         }

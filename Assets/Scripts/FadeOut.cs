@@ -24,7 +24,7 @@ public class FadeOut : MonoBehaviour
 
     static bool isFading, isShowing;
     static Vector3 target;
-    static Vector3 prevLocation;
+    static Vector3[] prevLocation = new Vector3[3];
 
     public static int layer;
 
@@ -33,14 +33,17 @@ public class FadeOut : MonoBehaviour
         isFading = false;
         isShowing = false;
         target = Camera.main.transform.position;
-        prevLocation = Camera.main.transform.position;
         layer = 0;
         blackScreen.color = new Color(blackScreen.color.r, blackScreen.color.g, blackScreen.color.b, 0);
     }
 
     public static void ChangeScene (Vector3 v)
     {
-        prevLocation = Camera.main.transform.position;
+        for (int i = 0; i < prevLocation.Length - 1; i ++)
+        {
+            prevLocation[prevLocation.Length - i - 1] = prevLocation[prevLocation.Length - i - 2];
+        }
+        prevLocation[0] = Camera.main.transform.position;
         isFading = true;
         isShowing = false;
         target = v;
@@ -49,8 +52,14 @@ public class FadeOut : MonoBehaviour
 
     public static void GoBack()
     {
-        ChangeScene(prevLocation);
-        layer -= 2;
+        isFading = true;
+        isShowing = false;
+        target = prevLocation[0];
+        for (int i = 0; i < prevLocation.Length - 1; i++)
+        {
+            prevLocation[i] = prevLocation[i + 1];
+        }
+        layer --;
     }
 
     void Update()
