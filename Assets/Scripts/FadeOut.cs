@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class FadeOut : MonoBehaviour
 {
+
+
+
     [SerializeField]
     CameraMovement camMov;
 
@@ -82,5 +85,6 @@ public class FadeOut : MonoBehaviour
                 isShowing = false;
             }
         }
+         
     }
 }

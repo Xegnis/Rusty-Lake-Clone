@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class CanZoomIn : MonoBehaviour
 {
+    public GameObject canvasSwitchTo;
+    public GameObject canvasSwitchFrom;
+
     [SerializeField]
     Transform location;
 
@@ -30,6 +33,7 @@ public class CanZoomIn : MonoBehaviour
         if ((Input.mousePosition - clickPos).magnitude <= (Screen.currentResolution.width / 20.0f))
             if (canZoomIn)
             {
+                
                 FadeOut.ChangeScene(location.position);
                 if (enableObjects != null)
                 {
@@ -39,6 +43,14 @@ public class CanZoomIn : MonoBehaviour
                             obj.InvokeChangeScene();
                     }
                 }
+               
+                if(canvasSwitchTo != null){
+                    canvasSwitchTo.SetActive(true);
+                }
+                if(canvasSwitchFrom != null){
+                    canvasSwitchFrom.SetActive(false);
+                    }
             }
+        }
     }
-}
+
