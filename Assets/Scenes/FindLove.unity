@@ -242,6 +242,8 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   targetSprite: {fileID: 0}
   needChange: 0
+  shouldFloat: 1
+  floatDistance: 1
 --- !u!212 &35805014
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -882,6 +884,8 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   targetSprite: {fileID: 0}
   needChange: 0
+  shouldFloat: 0
+  floatDistance: 0
 --- !u!114 &216271792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1783,6 +1787,8 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   targetSprite: {fileID: 0}
   needChange: 0
+  shouldFloat: 0
+  floatDistance: 0
 --- !u!61 &449782811
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2179,6 +2185,8 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   targetSprite: {fileID: 0}
   needChange: 0
+  shouldFloat: 0
+  floatDistance: 0
 --- !u!61 &611806495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2372,6 +2380,8 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   targetSprite: {fileID: 0}
   needChange: 0
+  shouldFloat: 0
+  floatDistance: 0
 --- !u!1 &723042769
 GameObject:
   m_ObjectHideFlags: 0
@@ -3242,6 +3252,8 @@ MonoBehaviour:
   targetObject: {fileID: 39036057}
   targetSprite: {fileID: 0}
   needChange: 1
+  shouldFloat: 1
+  floatDistance: 2
 --- !u!60 &927821858
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3621,7 +3633,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5f0886f86cce5724b8ccfa7ff17530a4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.442
+  m_Volume: 0.302
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4227,7 +4239,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 23bf3e4906eaeb74abfe5b35f769974b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.566
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5275,6 +5287,8 @@ MonoBehaviour:
   targetObject: {fileID: 1091490936}
   targetSprite: {fileID: 21300000, guid: e0a2c31d5ec19d84cac81b46892d2ac9, type: 3}
   needChange: 1
+  shouldFloat: 1
+  floatDistance: 3
 --- !u!1 &1212889330
 GameObject:
   m_ObjectHideFlags: 0
@@ -5786,6 +5800,8 @@ MonoBehaviour:
   targetObject: {fileID: 280468395}
   targetSprite: {fileID: 0}
   needChange: 1
+  shouldFloat: 0
+  floatDistance: 0
 --- !u!1 &1426260829
 GameObject:
   m_ObjectHideFlags: 0
@@ -7651,6 +7667,8 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   targetSprite: {fileID: 0}
   needChange: 0
+  shouldFloat: 1
+  floatDistance: 3
 --- !u!60 &1892803127
 PolygonCollider2D:
   m_ObjectHideFlags: 0
