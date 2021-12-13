@@ -66,6 +66,12 @@ public class ItemPickUp : Interactable {
         bool wasPickedUp = Inventory.instance.Add(item);
         if (wasPickedUp)
         {
+            if (targetObject!=null)
+            {
+                
+
+            }
+            
             Destroy(gameObject);
         }
     }
@@ -80,6 +86,10 @@ public class ItemPickUp : Interactable {
     public void ChangeSprite()
     {
         targetObject.GetComponent<SpriteRenderer>().sprite = targetSprite;
+        if (targetObject.name == "Well"){
+            targetObject.GetComponent<Animator>().enabled = false;
+        }
+        
         if (targetObject.GetComponent<Collider2D>() != null)
             targetObject.GetComponent<Collider2D>().enabled = false;
     }
