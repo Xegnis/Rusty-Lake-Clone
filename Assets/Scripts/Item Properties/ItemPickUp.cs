@@ -17,6 +17,8 @@ public class ItemPickUp : Interactable {
     public bool shouldFloat = false;
     public float floatDistance;
 
+    bool hasClicked;
+
 
     public override void Interact()
     {
@@ -29,14 +31,17 @@ public class ItemPickUp : Interactable {
     void OnMouseDown()
     {
         //Debug.Log("Pick");
-        if (!canPickUp)
+        if (!canPickUp || hasClicked)
             return;
+
         if (shouldFloat)
-            StartCoroutine(Float());
-        PickUp();
+            StartCoroutine(Float(floatDistance));
+        else
+            PickUp();
         if (needChange) {
             ChangeSprite();
         }
+        hasClicked = true;
 
     }
   
@@ -79,8 +84,21 @@ public class ItemPickUp : Interactable {
             targetObject.GetComponent<Collider2D>().enabled = false;
     }
 
-    IEnumerator Float ()
+    IEnumerator Float (float dist)
     {
-        yield return null;
+        float startPos = transform.position.y;
+        while (Mathf.Abs(transform.position.y - startPos) < (Mathf.Abs(dist) - 0.2f))
+        {
+            float yPos = Mathf.Lerp(transform.position.y, startPos + dist, 8 * Time.deltaTime);
+            transform.position = new Vector3(transform.position.x, yPos, transform.position.z);
+            yield return null;
+        }
+        if (dist > 0)
+        {
+            yield return StartCoroutine(Float(-dist / 4));
+            yield return new WaitForSeconds(0.2f);
+            PickUp();
+        }
+            
     }
 }
