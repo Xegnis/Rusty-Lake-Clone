@@ -27,6 +27,7 @@ public class FadeOut : MonoBehaviour
     static Vector3[] prevLocation = new Vector3[3];
 
     public static int layer;
+    static bool canClick = true;
 
     void Start()
     {
@@ -39,11 +40,14 @@ public class FadeOut : MonoBehaviour
 
     public static void ChangeScene (Vector3 v)
     {
+        if (!canClick)
+            return;
         for (int i = 0; i < prevLocation.Length - 1; i ++)
         {
             prevLocation[prevLocation.Length - i - 1] = prevLocation[prevLocation.Length - i - 2];
         }
         prevLocation[0] = Camera.main.transform.position;
+        canClick = false;
         isFading = true;
         isShowing = false;
         target = v;
@@ -92,6 +96,7 @@ public class FadeOut : MonoBehaviour
             if (blackScreen.color.a <= 0.0f)
             {
                 isShowing = false;
+                canClick = true;
             }
         }
          

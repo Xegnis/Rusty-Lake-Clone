@@ -10,9 +10,9 @@ public class KidOneItem : MonoBehaviour
     GameObject zoomIn;
 
     [SerializeField]
-    GameObject[] ani;
+    GameObject[] ani, mainAni;
     [SerializeField]
-    GameObject oldArm;
+    GameObject oldArm, mainOldArm;
 
     bool canShoot = false;
     public bool isAiming = false;
@@ -21,18 +21,22 @@ public class KidOneItem : MonoBehaviour
     {
         iI.canGet[1] = true;
         ani[0].SetActive(true);
+        mainAni[0].SetActive(true);
     }
 
     public void GetRibbon ()
     {
         iI.canGet[2] = true;
         ani[1].SetActive(true);
+        mainAni[1].SetActive(true);
         oldArm.SetActive(false);
+        mainOldArm.SetActive(false);
     }
 
     public void GetMarbles ()
     {
         ani[2].SetActive(true);
+        mainAni[2].SetActive(true);
         zoomIn.SetActive(false);
         canShoot = true;
     }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider2D))]
 public class ItemInteract : MonoBehaviour
@@ -31,6 +32,7 @@ public class ItemInteract : MonoBehaviour
                 {
                     iu.currentItem = null;
                     iu.currentSlot.itemText.text = "";
+                    iu.currentSlot.GetComponentInChildren<Image>().sprite = iu.normalSpr;
                     iu.currentSlot.ClearSlot();
                     Inventory.instance.Remove(items[i]);
                 }

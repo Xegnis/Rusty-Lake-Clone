@@ -11,4 +11,9 @@ public class KidOneMain : MonoBehaviour
     {
         k1.isAiming = true;
     }
+
+    IEnumerator Aim ()
+    {
+        yield return null;
+    }
 }

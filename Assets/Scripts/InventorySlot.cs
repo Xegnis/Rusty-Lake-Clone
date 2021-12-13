@@ -53,6 +53,7 @@ public class InventorySlot : MonoBehaviour{
                 iu.currentItem = item;
                 itemText.text = item.name;
                 iu.currentSlot = this;
+                iu.currentSlot.GetComponentInChildren<Image>().sprite = iu.highlightSpr;
                 //Debug.Log("selected");
                 
                 
@@ -60,10 +61,14 @@ public class InventorySlot : MonoBehaviour{
         }
         else
         {
-            iu.currentItem = null;
-            iu.currentSlot = null;
-            itemText.text = "";
-            //Debug.Log("deselected");
+            if (item != null)
+            {
+                iu.currentSlot.GetComponentInChildren<Image>().sprite = iu.normalSpr;
+                iu.currentItem = null;
+                iu.currentSlot = null;
+                itemText.text = "";
+                //Debug.Log("deselected");
+            }
         }
         //TODO: add a highlight effect
     }
