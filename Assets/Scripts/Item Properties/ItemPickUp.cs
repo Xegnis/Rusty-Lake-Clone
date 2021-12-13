@@ -8,9 +8,17 @@ public class ItemPickUp : Interactable {
   
     public bool canPickUp = true;
 
+    [Header("Change Sprite")]
     public GameObject targetObject;
     public Sprite targetSprite;
     public bool needChange = false;
+
+    [Header("Floating")]
+    public bool shouldFloat = false;
+    public float floatDistance;
+
+    bool hasClicked;
+
 
     public override void Interact()
     {
@@ -23,12 +31,17 @@ public class ItemPickUp : Interactable {
     void OnMouseDown()
     {
         //Debug.Log("Pick");
-        if (!canPickUp)
+        if (!canPickUp || hasClicked)
             return;
-        PickUp();
+
+        if (shouldFloat)
+            StartCoroutine(Float(floatDistance));
+        else
+            PickUp();
         if (needChange) {
             ChangeSprite();
         }
+        hasClicked = true;
 
     }
   
@@ -67,6 +80,25 @@ public class ItemPickUp : Interactable {
     public void ChangeSprite()
     {
         targetObject.GetComponent<SpriteRenderer>().sprite = targetSprite;
-        targetObject.GetComponent<Collider2D>().enabled = false;
+        if (targetObject.GetComponent<Collider2D>() != null)
+            targetObject.GetComponent<Collider2D>().enabled = false;
+    }
+
+    IEnumerator Float (float dist)
+    {
+        float startPos = transform.position.y;
+        while (Mathf.Abs(transform.position.y - startPos) < (Mathf.Abs(dist) - 0.2f))
+        {
+            float yPos = Mathf.Lerp(transform.position.y, startPos + dist, 8 * Time.deltaTime);
+            transform.position = new Vector3(transform.position.x, yPos, transform.position.z);
+            yield return null;
+        }
+        if (dist > 0)
+        {
+            yield return StartCoroutine(Float(-dist / 4));
+            yield return new WaitForSeconds(0.2f);
+            PickUp();
+        }
+            
     }
 }

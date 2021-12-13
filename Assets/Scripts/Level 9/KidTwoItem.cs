@@ -11,9 +11,17 @@ public class KidTwoItem : MonoBehaviour
     [SerializeField]
     GameObject push;
 
+    [SerializeField]
+    GameObject honey;
+
+    [SerializeField]
+    GameObject oldArm, newArm;
+
+    bool canClick = false;
+
     public void GetHoney()
     {
-        //TODO: honey animation
+        honey.SetActive(true);
         hasHoney = true;
     }
 
@@ -25,8 +33,19 @@ public class KidTwoItem : MonoBehaviour
 
     public void GetLid()
     {
-        //TODO: lid animation
+        oldArm.SetActive(false);
+        newArm.SetActive(true);
         hasLid = true;
-        push.SetActive(true);
+    }
+
+    void OnMouseDown()
+    {
+        if (canClick)
+        {
+            oldArm.SetActive(true);
+            newArm.SetActive(false);
+            canClick = false;
+            push.SetActive(true);
+        }
     }
 }

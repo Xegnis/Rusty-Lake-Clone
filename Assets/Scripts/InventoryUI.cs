@@ -7,6 +7,8 @@ public class InventoryUI : MonoBehaviour
     public Transform itemsParent;
     public Item currentItem;
     public InventorySlot currentSlot;
+    public Sprite highlightSpr;
+    public Sprite normalSpr;
 
     Inventory inventory;
    
