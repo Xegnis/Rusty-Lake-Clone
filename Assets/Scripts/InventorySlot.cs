@@ -50,6 +50,8 @@ public class InventorySlot : MonoBehaviour{
         {
             if (item != null)
             {
+                if (iu.currentSlot != null)
+                    iu.currentSlot.GetComponentInChildren<Image>().sprite = iu.normalSpr;
                 iu.currentItem = item;
                 itemText.text = item.name;
                 iu.currentSlot = this;

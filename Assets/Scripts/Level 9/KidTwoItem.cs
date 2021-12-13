@@ -9,13 +9,16 @@ public class KidTwoItem : MonoBehaviour
     ItemInteract iI;
 
     [SerializeField]
-    GameObject push;
+    Collider2D push;
 
     [SerializeField]
     GameObject honey;
 
     [SerializeField]
     GameObject oldArm, newArm;
+
+    [SerializeField]
+    GameObject butterfly, lid;
 
     bool canClick = false;
 
@@ -28,6 +31,7 @@ public class KidTwoItem : MonoBehaviour
     public void GetButterfly()
     {
         hasButterfly = true;
+        butterfly.SetActive(true);
         iI.canGet[1] = true;
     }
 
@@ -36,6 +40,8 @@ public class KidTwoItem : MonoBehaviour
         oldArm.SetActive(false);
         newArm.SetActive(true);
         hasLid = true;
+        lid.SetActive(true);
+        canClick = true;
     }
 
     void OnMouseDown()
@@ -45,7 +51,7 @@ public class KidTwoItem : MonoBehaviour
             oldArm.SetActive(true);
             newArm.SetActive(false);
             canClick = false;
-            push.SetActive(true);
+            push.enabled = true;
         }
     }
 }
