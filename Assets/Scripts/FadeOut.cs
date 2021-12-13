@@ -54,6 +54,21 @@ public class FadeOut : MonoBehaviour
         layer++;
     }
 
+    public static void ChangeScene(Vector3 v, bool sameDepth)
+    {
+        if (!sameDepth)
+        {
+            ChangeScene(v);
+        }
+        else
+        {
+            canClick = false;
+            isFading = true;
+            isShowing = false;
+            target = v;
+        }
+    }
+
     public static void GoBack()
     {
         isFading = true;

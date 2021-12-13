@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Trigger
   - Slider
+  - Marble
+  - Beehive
   layers:
   - Default
   - TransparentFX
