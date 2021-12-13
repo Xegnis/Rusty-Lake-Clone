@@ -8,9 +8,15 @@ public class ItemPickUp : Interactable {
   
     public bool canPickUp = true;
 
+    [Header("Change Sprite")]
     public GameObject targetObject;
     public Sprite targetSprite;
     public bool needChange = false;
+
+    [Header("Floating")]
+    public bool shouldFloat = false;
+    public float floatDistance;
+
 
     public override void Interact()
     {
@@ -25,6 +31,8 @@ public class ItemPickUp : Interactable {
         //Debug.Log("Pick");
         if (!canPickUp)
             return;
+        if (shouldFloat)
+            StartCoroutine(Float());
         PickUp();
         if (needChange) {
             ChangeSprite();
@@ -67,6 +75,12 @@ public class ItemPickUp : Interactable {
     public void ChangeSprite()
     {
         targetObject.GetComponent<SpriteRenderer>().sprite = targetSprite;
-        targetObject.GetComponent<Collider2D>().enabled = false;
+        if (targetObject.GetComponent<Collider2D>() != null)
+            targetObject.GetComponent<Collider2D>().enabled = false;
+    }
+
+    IEnumerator Float ()
+    {
+        yield return null;
     }
 }
