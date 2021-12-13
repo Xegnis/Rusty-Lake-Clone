@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b82c367f9f393c04d863e444f15b4561, type: 3}
   m_Name: Hanky
   m_EditorClassIdentifier: 
-  name: Hanky
+  name: hanky
   icon: {fileID: 21300000, guid: a7cd40d0d07869e4f88515a162a906a8, type: 3}
   isDefaultItem: 0

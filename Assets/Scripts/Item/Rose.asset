@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b82c367f9f393c04d863e444f15b4561, type: 3}
   m_Name: Rose
   m_EditorClassIdentifier: 
-  name: Rose
+  name: rose
   icon: {fileID: 21300000, guid: 7c09d3e366629da4ba0e816849d5a0c6, type: 3}
   isDefaultItem: 0
