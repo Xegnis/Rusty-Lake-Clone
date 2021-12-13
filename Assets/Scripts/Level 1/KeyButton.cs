@@ -18,6 +18,11 @@ public class KeyButton : MonoBehaviour
        // code = GetComponentInChildren<Text>();
     }
 
+    void Awake()
+    {
+        spr = GetComponent<SpriteRenderer>();
+    }
+
   
 
     public void AddNumber()

@@ -55,7 +55,7 @@ public class DragSlider : MonoBehaviour
 
    private void OnTriggerEnter2D(Collider2D collision)
    {
-       if(collision.gameObject.name == "Slider" ) {
+       if(collision.gameObject.name == "Trigger" ) {
            Debug.Log("yes");
            Camera.main.transform.position = nextCamPos;
        }
