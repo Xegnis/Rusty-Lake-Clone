@@ -9,7 +9,7 @@ public class KeyCodeManager : MonoBehaviour
     public int key01;
     public int key02;
     public int key03;
-    public Collider2D collider;
+    public BoxCollider2D collider;
    // public Vector3 nextCamPos;
 
 
