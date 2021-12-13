@@ -4335,7 +4335,7 @@ MonoBehaviour:
   key01: 0
   key02: 0
   key03: 0
-  collider: {fileID: 781460919}
+  col: {fileID: 0}
 --- !u!4 &932405763
 Transform:
   m_ObjectHideFlags: 0
@@ -6247,6 +6247,8 @@ MonoBehaviour:
   targetObject: {fileID: 2028870713}
   targetSprite: {fileID: 21300000, guid: 499fbd043cdfe4a43b6aca17907ad741, type: 3}
   needChange: 1
+  shouldFloat: 0
+  floatDistance: 0
 --- !u!61 &1590123970
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6459,6 +6461,8 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   targetSprite: {fileID: 0}
   needChange: 0
+  shouldFloat: 0
+  floatDistance: 0
 --- !u!61 &1616226652
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7128,6 +7132,8 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   targetSprite: {fileID: 0}
   needChange: 0
+  shouldFloat: 0
+  floatDistance: 0
 --- !u!61 &1761481471
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7230,6 +7236,8 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   targetSprite: {fileID: 0}
   needChange: 0
+  shouldFloat: 0
+  floatDistance: 0
 --- !u!212 &1779979382
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7412,6 +7420,8 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   targetSprite: {fileID: 0}
   needChange: 0
+  shouldFloat: 1
+  floatDistance: 5
 --- !u!1 &1834682654
 GameObject:
   m_ObjectHideFlags: 0
@@ -8268,7 +8278,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 42038543e4981994d922a2e3a91fa6a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9035,6 +9045,8 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   targetSprite: {fileID: 0}
   needChange: 0
+  shouldFloat: 0
+  floatDistance: 0
 --- !u!212 &2061942109
 SpriteRenderer:
   m_ObjectHideFlags: 0
