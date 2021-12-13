@@ -8,6 +8,8 @@ public class KidOneItem : MonoBehaviour
     ItemInteract iI;
     [SerializeField]
     GameObject zoomIn;
+    [SerializeField]
+    Collider2D col;
 
     [SerializeField]
     GameObject[] ani, mainAni;
@@ -15,7 +17,6 @@ public class KidOneItem : MonoBehaviour
     GameObject oldArm, mainOldArm;
 
     bool canShoot = false;
-    public bool isAiming = false;
 
     public void GetBranch ()
     {
@@ -38,6 +39,7 @@ public class KidOneItem : MonoBehaviour
         ani[2].SetActive(true);
         mainAni[2].SetActive(true);
         zoomIn.SetActive(false);
+        col.enabled = true;
         canShoot = true;
     }
 
@@ -46,7 +48,6 @@ public class KidOneItem : MonoBehaviour
         if (!canShoot)
             return;
         FadeOut.GoBack();
-        isAiming = true;
     }
 
 }

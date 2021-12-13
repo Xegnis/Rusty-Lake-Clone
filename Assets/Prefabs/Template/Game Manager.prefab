@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camMov: {fileID: 0}
   blackScreen: {fileID: 0}
-  blackScreenSpeed: 2.5
+  blackScreenSpeed: 4
   upDownArrrows: {fileID: 0}
 --- !u!114 &5678269234067961890
 MonoBehaviour:
