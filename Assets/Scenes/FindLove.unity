@@ -446,6 +446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70516ea2f44bdb747bb913cf9aa69843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasSwitchTo: {fileID: 0}
+  canvasSwitchFrom: {fileID: 0}
   location: {fileID: 1431256938}
   enableObjects: []
 --- !u!60 &39036062
@@ -855,6 +857,7 @@ GameObject:
   - component: {fileID: 216271793}
   - component: {fileID: 216271792}
   - component: {fileID: 216271791}
+  - component: {fileID: 216271796}
   m_Layer: 0
   m_Name: Mary_ring
   m_TagString: Untagged
@@ -976,6 +979,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &216271796
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216271790}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.22295761, y: -0.18330574}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.31, y: 0.23}
+    newSize: {x: 0.31, y: 0.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7276516, y: 1.6143322}
+  m_EdgeRadius: 0
 --- !u!1 &225549007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,6 +1117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70516ea2f44bdb747bb913cf9aa69843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasSwitchTo: {fileID: 0}
+  canvasSwitchFrom: {fileID: 0}
   location: {fileID: 1431256938}
   enableObjects: []
 --- !u!60 &225549012
@@ -1626,18 +1657,6 @@ MonoBehaviour:
       - m_Target: {fileID: 449782810}
         m_TargetAssemblyTypeName: ItemPickUp, Assembly-CSharp
         m_MethodName: EnablePickUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 449782810}
-        m_TargetAssemblyTypeName: ItemPickUp, Assembly-CSharp
-        m_MethodName: PickUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2453,6 +2472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70516ea2f44bdb747bb913cf9aa69843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasSwitchTo: {fileID: 0}
+  canvasSwitchFrom: {fileID: 0}
   location: {fileID: 1899163590}
   enableObjects:
   - {fileID: 1144358465}
@@ -3446,6 +3467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70516ea2f44bdb747bb913cf9aa69843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasSwitchTo: {fileID: 0}
+  canvasSwitchFrom: {fileID: 0}
   location: {fileID: 95815802}
   enableObjects: []
 --- !u!61 &1091490944
@@ -3557,7 +3580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144358461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.4, y: 30.9983, z: 0}
+  m_LocalPosition: {x: 27.4, y: 31.01, z: 0}
   m_LocalScale: {x: 1.7653236, y: 1.7653236, z: 1.7653236}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3738,14 +3761,26 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1915436815}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
+        m_MethodName: StartPlayback
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: FilterOne
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1144358470}
+        m_TargetAssemblyTypeName: MaryThink, Assembly-CSharp
+        m_MethodName: AnimNoIncrease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
   items:
@@ -4043,6 +4078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70516ea2f44bdb747bb913cf9aa69843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasSwitchTo: {fileID: 0}
+  canvasSwitchFrom: {fileID: 0}
   location: {fileID: 1899163590}
   enableObjects:
   - {fileID: 1144358465}
@@ -4320,6 +4357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70516ea2f44bdb747bb913cf9aa69843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasSwitchTo: {fileID: 0}
+  canvasSwitchFrom: {fileID: 0}
   location: {fileID: 457765412}
   enableObjects: []
 --- !u!60 &1176585036
@@ -5256,7 +5295,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   items:
-  - {fileID: 11400000, guid: a05f6af129ee21c4f8fdb751f2cc9b8b, type: 2}
+  - {fileID: 11400000, guid: 63a8ee4698608cf43b4ca14f2c806907, type: 2}
   iu: {fileID: 1063255554}
   canGet: 01
   deleteItem: 01
@@ -5434,6 +5473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70516ea2f44bdb747bb913cf9aa69843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasSwitchTo: {fileID: 0}
+  canvasSwitchFrom: {fileID: 0}
   location: {fileID: 1431256938}
   enableObjects: []
 --- !u!61 &1426260832
@@ -5735,7 +5776,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a9eeb9b801b133d4abd7cf59d3dea9ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6508,6 +6549,7 @@ GameObject:
   - component: {fileID: 1693808456}
   - component: {fileID: 1693808462}
   - component: {fileID: 1693808457}
+  - component: {fileID: 1693808459}
   m_Layer: 0
   m_Name: Mary_cabinet (1)
   m_TagString: Untagged
@@ -6557,20 +6599,8 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CabinetOpen
+          m_StringArgument: LockOpen
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 216271794}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
   items:
   - {fileID: 11400000, guid: fb0cc6e3a2555b9469f34a47e4397ee6, type: 2}
@@ -6603,6 +6633,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.8646693, y: 4.9372396}
   m_EdgeRadius: 0
+--- !u!114 &1693808459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693808455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1da6b325661794aab70c7722bafb7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toPlay: 0
+  ring: {fileID: 216271790}
 --- !u!212 &1693808460
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7257,7 +7301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6c2cd33beb5464c98b7532f4894565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: a05f6af129ee21c4f8fdb751f2cc9b8b, type: 2}
+  item: {fileID: 11400000, guid: 63a8ee4698608cf43b4ca14f2c806907, type: 2}
   canPickUp: 1
   targetObject: {fileID: 0}
   targetSprite: {fileID: 0}
@@ -7661,6 +7705,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70516ea2f44bdb747bb913cf9aa69843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasSwitchTo: {fileID: 0}
+  canvasSwitchFrom: {fileID: 0}
   location: {fileID: 457765412}
   enableObjects: []
 --- !u!60 &1953673852
