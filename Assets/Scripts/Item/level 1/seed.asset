@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b82c367f9f393c04d863e444f15b4561, type: 3}
   m_Name: seed
   m_EditorClassIdentifier: 
-  name: New Item
-  icon: {fileID: 0}
+  name: seed
+  icon: {fileID: 21300000, guid: 3b0209c8826f2b04ea272744652cce75, type: 3}
   isDefaultItem: 0

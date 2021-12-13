@@ -6,18 +6,19 @@ using UnityEngine.UI;
 public class KeyButton : MonoBehaviour
 {
  
-   private Text code; 
+   private SpriteRenderer spr; 
+   public Sprite[] codes;
    private int codeNumber;
    public KeyCodeManager kcm;
+   public int keyPlace;
 
     void Start()
     {
-      
         codeNumber = 0; 
-        code = GetComponentInChildren<Text>();
+       // code = GetComponentInChildren<Text>();
     }
 
-
+  
 
     public void AddNumber()
     {
@@ -29,9 +30,9 @@ public class KeyButton : MonoBehaviour
         
     }
 
-    public void OnKeyClick(int keyPlace){
+    void OnMouseDown(){
         AddNumber();
-        code.text = codeNumber.ToString();
+        spr.sprite = codes[codeNumber]; //code.text = codeNumber.ToString();
         kcm.UpdateEnteredCode(keyPlace, codeNumber);
     }
 }
