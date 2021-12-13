@@ -9,34 +9,39 @@ public class KidOneItem : MonoBehaviour
     [SerializeField]
     GameObject zoomIn;
 
+    [SerializeField]
+    GameObject[] ani;
+    [SerializeField]
+    GameObject oldArm;
+
     bool canShoot = false;
     public bool isAiming = false;
 
     public void GetBranch ()
     {
         iI.canGet[1] = true;
-        //TODO: branch animation
+        ani[0].SetActive(true);
     }
 
     public void GetRibbon ()
     {
         iI.canGet[2] = true;
-        //TODO: ribbon animation
+        ani[1].SetActive(true);
+        oldArm.SetActive(false);
     }
 
     public void GetMarbles ()
     {
-        //TODO: marbles animationi
-        FadeOut.GoBack();
+        ani[2].SetActive(true);
         zoomIn.SetActive(false);
         canShoot = true;
-        isAiming = true;
     }
 
     void OnMouseDown()
     {
         if (!canShoot)
             return;
+        FadeOut.GoBack();
         isAiming = true;
     }
 
