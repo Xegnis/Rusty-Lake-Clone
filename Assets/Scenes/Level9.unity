@@ -195,8 +195,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6c2cd33beb5464c98b7532f4894565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 246e9d05ed7bc734d95c0e446859c1a4, type: 2}
+  item: {fileID: 0}
   canPickUp: 1
+  targetObject: {fileID: 0}
+  targetSprite: {fileID: 0}
+  needChange: 0
 --- !u!114 &25491074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,8 +243,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26262429}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7, y: -0.8179, z: 0}
-  m_LocalScale: {x: 1.4148674, y: 4.731614, z: 1}
+  m_LocalPosition: {x: 1.7, y: -0.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1559951396}
   m_RootOrder: 1
@@ -301,8 +304,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}
+  m_Sprite: {fileID: 3582890531107242561, guid: 1dfef4bf46c156c41986ea5353ffef8d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -324,6 +327,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70516ea2f44bdb747bb913cf9aa69843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasSwitchTo: {fileID: 0}
+  canvasSwitchFrom: {fileID: 0}
   location: {fileID: 2079010743}
   enableObjects: []
 --- !u!61 &26262434
@@ -343,7 +348,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.8575, y: 4.618253}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -411,7 +416,7 @@ Transform:
   m_GameObject: {fileID: 108347281}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.35, y: -0.8179, z: 0}
-  m_LocalScale: {x: 1.4148674, y: 4.731614, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1559951396}
   m_RootOrder: 2
@@ -494,6 +499,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70516ea2f44bdb747bb913cf9aa69843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasSwitchTo: {fileID: 0}
+  canvasSwitchFrom: {fileID: 0}
   location: {fileID: 2079010743}
   enableObjects: []
 --- !u!61 &108347286
@@ -775,8 +782,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6c2cd33beb5464c98b7532f4894565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: a0736b63d54232046b450162c14bca1e, type: 2}
+  item: {fileID: 0}
   canPickUp: 1
+  targetObject: {fileID: 0}
+  targetSprite: {fileID: 0}
+  needChange: 0
 --- !u!1 &326422668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,7 +1187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2336418466624699432, guid: 927b1ec943ac98547a50f551743df419, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 2336418466624699432, guid: 927b1ec943ac98547a50f551743df419, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1474,8 +1484,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6c2cd33beb5464c98b7532f4894565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 8354124b432519c4e843e79208db1df1, type: 2}
+  item: {fileID: 0}
   canPickUp: 1
+  targetObject: {fileID: 0}
+  targetSprite: {fileID: 0}
+  needChange: 0
 --- !u!212 &482863252
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1951,8 +1964,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6c2cd33beb5464c98b7532f4894565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: c08863ba807d58c42a6d1ba9feac4897, type: 2}
+  item: {fileID: 0}
   canPickUp: 1
+  targetObject: {fileID: 0}
+  targetSprite: {fileID: 0}
+  needChange: 0
 --- !u!61 &709840540
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2719,8 +2735,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   items:
-  - {fileID: 11400000, guid: 8354124b432519c4e843e79208db1df1, type: 2}
-  - {fileID: 11400000, guid: 6575372d6cf3a2844a8ae5292f0a27f8, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   iu: {fileID: 1892446933}
   canGet: 0100
   deleteItem: 0101
@@ -3273,6 +3289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70516ea2f44bdb747bb913cf9aa69843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasSwitchTo: {fileID: 0}
+  canvasSwitchFrom: {fileID: 0}
   location: {fileID: 1431256938}
   enableObjects: []
 --- !u!61 &1393219879
@@ -3413,6 +3431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70516ea2f44bdb747bb913cf9aa69843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasSwitchTo: {fileID: 0}
+  canvasSwitchFrom: {fileID: 0}
   location: {fileID: 2079010743}
   enableObjects: []
 --- !u!61 &1393474649
@@ -3588,7 +3608,7 @@ Transform:
   m_GameObject: {fileID: 1513560921}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.95, y: -0.8179, z: 0}
-  m_LocalScale: {x: 1.4148674, y: 4.731614, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1393219877}
   m_Father: {fileID: 1559951396}
@@ -3649,8 +3669,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}
+  m_Sprite: {fileID: -4811183100122873270, guid: 47ff664d597ce2242a48ee1727df3ae1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3677,7 +3697,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.49, y: 4.8657937}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3811,6 +3831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70516ea2f44bdb747bb913cf9aa69843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasSwitchTo: {fileID: 0}
+  canvasSwitchFrom: {fileID: 0}
   location: {fileID: 75875930}
   enableObjects: []
 --- !u!61 &1557273252
@@ -4387,9 +4409,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   items:
-  - {fileID: 11400000, guid: 246e9d05ed7bc734d95c0e446859c1a4, type: 2}
-  - {fileID: 11400000, guid: a0736b63d54232046b450162c14bca1e, type: 2}
-  - {fileID: 11400000, guid: c08863ba807d58c42a6d1ba9feac4897, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   iu: {fileID: 1892446933}
   canGet: 010000
   deleteItem: 010101
@@ -4531,8 +4553,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6c2cd33beb5464c98b7532f4894565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 6575372d6cf3a2844a8ae5292f0a27f8, type: 2}
+  item: {fileID: 0}
   canPickUp: 1
+  targetObject: {fileID: 0}
+  targetSprite: {fileID: 0}
+  needChange: 0
 --- !u!61 &1779762101
 BoxCollider2D:
   m_ObjectHideFlags: 0
