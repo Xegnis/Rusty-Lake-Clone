@@ -1221,6 +1221,7 @@ MonoBehaviour:
   location: {fileID: 162269546}
   enableObjects:
   - {fileID: 0}
+  sameDepth: 1
 --- !u!61 &211498008
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2377,6 +2378,7 @@ MonoBehaviour:
   canvasSwitchFrom: {fileID: 0}
   location: {fileID: 1355645825}
   enableObjects: []
+  sameDepth: 0
 --- !u!61 &494466570
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2604,6 +2606,7 @@ MonoBehaviour:
   canvasSwitchFrom: {fileID: 0}
   location: {fileID: 1386144433}
   enableObjects: []
+  sameDepth: 0
 --- !u!61 &540929998
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3481,6 +3484,7 @@ MonoBehaviour:
   location: {fileID: 594360464}
   enableObjects:
   - {fileID: 540929999}
+  sameDepth: 1
 --- !u!61 &781460919
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3851,6 +3855,7 @@ MonoBehaviour:
   canvasSwitchFrom: {fileID: 0}
   location: {fileID: 1956563482}
   enableObjects: []
+  sameDepth: 0
 --- !u!61 &824477374
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6313,6 +6318,7 @@ MonoBehaviour:
   canvasSwitchFrom: {fileID: 0}
   location: {fileID: 785323259}
   enableObjects: []
+  sameDepth: 0
 --- !u!61 &1549551420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7666,6 +7672,7 @@ MonoBehaviour:
   canvasSwitchFrom: {fileID: 0}
   location: {fileID: 1652950448}
   enableObjects: []
+  sameDepth: 0
 --- !u!61 &1839788204
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8451,6 +8458,7 @@ MonoBehaviour:
   location: {fileID: 0}
   enableObjects:
   - {fileID: 0}
+  sameDepth: 0
 --- !u!114 &1997040369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9094,6 +9102,7 @@ MonoBehaviour:
   canvasSwitchFrom: {fileID: 0}
   location: {fileID: 1164526745}
   enableObjects: []
+  sameDepth: 0
 --- !u!61 &2050533967
 BoxCollider2D:
   m_ObjectHideFlags: 0
