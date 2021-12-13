@@ -9,6 +9,7 @@ public class KeyCodeManager : MonoBehaviour
     public int key01;
     public int key02;
     public int key03;
+    public Collider2D collider;
    // public Vector3 nextCamPos;
 
 
@@ -17,6 +18,7 @@ public class KeyCodeManager : MonoBehaviour
             Debug.Log("you did it!");
            // Camera.main.transform.position = nextCamPos;
            // gameObject.SetActive(false);
+           collider.enabled = true;
            
         }
 
