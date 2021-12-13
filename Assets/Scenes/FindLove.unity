@@ -452,6 +452,7 @@ MonoBehaviour:
   canvasSwitchFrom: {fileID: 0}
   location: {fileID: 1431256938}
   enableObjects: []
+  sameDepth: 0
 --- !u!60 &39036062
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1125,6 +1126,7 @@ MonoBehaviour:
   canvasSwitchFrom: {fileID: 0}
   location: {fileID: 1431256938}
   enableObjects: []
+  sameDepth: 0
 --- !u!60 &225549012
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2611,6 +2613,7 @@ MonoBehaviour:
   enableObjects:
   - {fileID: 1144358465}
   - {fileID: 1091490941}
+  sameDepth: 0
 --- !u!60 &724269034
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3606,6 +3609,7 @@ MonoBehaviour:
   canvasSwitchFrom: {fileID: 0}
   location: {fileID: 95815802}
   enableObjects: []
+  sameDepth: 0
 --- !u!61 &1091490944
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4469,6 +4473,7 @@ MonoBehaviour:
   enableObjects:
   - {fileID: 1144358465}
   - {fileID: 1091490941}
+  sameDepth: 0
 --- !u!60 &1159941785
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4746,6 +4751,7 @@ MonoBehaviour:
   canvasSwitchFrom: {fileID: 0}
   location: {fileID: 457765412}
   enableObjects: []
+  sameDepth: 0
 --- !u!60 &1176585036
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5866,6 +5872,7 @@ MonoBehaviour:
   canvasSwitchFrom: {fileID: 0}
   location: {fileID: 1431256938}
   enableObjects: []
+  sameDepth: 0
 --- !u!61 &1426260832
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8100,6 +8107,7 @@ MonoBehaviour:
   canvasSwitchFrom: {fileID: 0}
   location: {fileID: 457765412}
   enableObjects: []
+  sameDepth: 0
 --- !u!60 &1953673852
 PolygonCollider2D:
   m_ObjectHideFlags: 0
