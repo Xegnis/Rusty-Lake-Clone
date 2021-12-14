@@ -8,6 +8,6 @@ public class TreeGrow : MonoBehaviour
 
     void OnMouseDown(){
         FadeOut.GoBack();
-        Instantiate(draw, new Vector3(5.42f, 1.6f, 0), Quaternion.identity);
+        Instantiate(draw, new Vector3(4.22f, 1.6f, 0), Quaternion.identity);
     }
 }
