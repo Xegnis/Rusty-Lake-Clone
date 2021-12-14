@@ -6837,6 +6837,8 @@ GameObject:
   - component: {fileID: 1750253125}
   - component: {fileID: 1750253124}
   - component: {fileID: 1750253126}
+  - component: {fileID: 1750253128}
+  - component: {fileID: 1750253127}
   m_Layer: 0
   m_Name: OpenedBox
   m_TagString: Untagged
@@ -6924,6 +6926,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 618468663}
   parallaxEffect: 0.25
+--- !u!114 &1750253127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750253123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70516ea2f44bdb747bb913cf9aa69843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasSwitchTo: {fileID: 0}
+  canvasSwitchFrom: {fileID: 0}
+  location: {fileID: 594360464}
+  enableObjects: []
+  sameDepth: 0
+--- !u!61 &1750253128
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750253123}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.4422073, y: 0.4638319}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 23.88, y: 16.685682}
+    newSize: {x: 23.88, y: 16.685682}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12.216938, y: 9.728189}
+  m_EdgeRadius: 0
 --- !u!1 &1761481467
 GameObject:
   m_ObjectHideFlags: 0
