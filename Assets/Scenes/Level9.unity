@@ -430,6 +430,7 @@ MonoBehaviour:
   location: {fileID: 2079010743}
   enableObjects:
   - {fileID: 1308886137}
+  sameDepth: 0
 --- !u!61 &26262434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1144,6 +1145,7 @@ MonoBehaviour:
   location: {fileID: 2079010743}
   enableObjects:
   - {fileID: 1308886137}
+  sameDepth: 0
 --- !u!61 &108347286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6702,6 +6704,7 @@ MonoBehaviour:
   canvasSwitchFrom: {fileID: 0}
   location: {fileID: 2079010743}
   enableObjects: []
+  sameDepth: 0
 --- !u!114 &970005268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6787,7 +6790,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2125242153530336843, guid: 1dfef4bf46c156c41986ea5353ffef8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7655,7 +7658,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2125242153530336843, guid: 1dfef4bf46c156c41986ea5353ffef8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8016,6 +8019,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1253065012}
   - component: {fileID: 1253065013}
+  - component: {fileID: 1253065014}
   m_Layer: 0
   m_Name: Untitled_Artwork-1
   m_TagString: Untagged
@@ -8089,6 +8093,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1253065014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253065011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c4b897e33a6ce46a217cfb823713c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1781606539}
+  parallaxEffect: 0.3
 --- !u!1 &1286823497
 GameObject:
   m_ObjectHideFlags: 0
@@ -9180,6 +9198,7 @@ MonoBehaviour:
   canvasSwitchFrom: {fileID: 0}
   location: {fileID: 1431256938}
   enableObjects: []
+  sameDepth: 0
 --- !u!61 &1393219879
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10377,6 +10396,7 @@ MonoBehaviour:
   canvasSwitchFrom: {fileID: 0}
   location: {fileID: 75875930}
   enableObjects: []
+  sameDepth: 0
 --- !u!61 &1557273252
 BoxCollider2D:
   m_ObjectHideFlags: 0
