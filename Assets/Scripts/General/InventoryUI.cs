@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -13,7 +14,16 @@ public class InventoryUI : MonoBehaviour
     Inventory inventory;
    
    List<InventorySlot> slots = new List<InventorySlot>();
-   
+    
+    public AudioClip[] pickUpSound;
+    public AudioClip selectSound;
+    AudioSource audioSource;
+
+    void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void Start()
     {
         inventory = Inventory.instance;
@@ -38,5 +48,17 @@ public class InventoryUI : MonoBehaviour
 
         }
         
+    }
+
+    public void PlayPickUp ()
+    {
+        audioSource.clip = pickUpSound[Random.Range(0, pickUpSound.Length)];
+        audioSource.Play();
+    }
+
+    public void PlaySelected ()
+    {
+        audioSource.clip = selectSound;
+        audioSource.Play();
     }
 }

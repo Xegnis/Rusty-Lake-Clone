@@ -14,13 +14,16 @@ public class KeyCodeManager : MonoBehaviour
 
 
     public void CheckCode(){
-        if(enteredCode == correctCode){
-            Debug.Log("you did it!");
-           // Camera.main.transform.position = nextCamPos;
-           // gameObject.SetActive(false);
-           col.enabled = true;
-           
+        if (enteredCode == correctCode)
+        {
+            //Debug.Log("you did it!");
+            // Camera.main.transform.position = nextCamPos;
+            // gameObject.SetActive(false);
+            col.enabled = true;
+
         }
+        else
+            col.enabled = false;
 
     }
 

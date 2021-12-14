@@ -17,6 +17,7 @@ public class Beehive : CanJiggle
     {
         if (collision.CompareTag("Marble"))
         {
+            AudioNine.instance.PlayHit();
             if (hitTime < hit || !fallen)
             {
                 isRunning = true;

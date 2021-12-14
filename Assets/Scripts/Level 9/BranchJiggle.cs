@@ -20,6 +20,7 @@ public class BranchJiggle : CanJiggle
         count++;
         startDegree = transform.localEulerAngles.z;
         StartCoroutine(Jiggle(degrees));
+        AudioNine.instance.PlayRibbon();
     }
     new IEnumerator Jiggle(float d)
     {

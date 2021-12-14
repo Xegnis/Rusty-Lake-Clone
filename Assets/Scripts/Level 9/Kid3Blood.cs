@@ -19,8 +19,10 @@ public class Kid3Blood : MonoBehaviour
     {
         if (collision.CompareTag("Beehive"))
         {
+            AudioNine.instance.PlayLaughter();
             beehive.SetActive(true);
             k1Col.enabled = false;
+            k3Col.enabled = true;
             Destroy(collision.gameObject);
             foreach (GameObject g in disable)
                 g.SetActive(false);

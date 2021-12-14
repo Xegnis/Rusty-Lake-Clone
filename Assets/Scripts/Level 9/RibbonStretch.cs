@@ -19,6 +19,7 @@ public class RibbonStretch : CanStretch
         count++;
         startScale = transform.localScale;
         StartCoroutine(Stretch(stretchScale));
+        AudioNine.instance.PlayRibbon();
     }
 
     new IEnumerator Stretch(Vector3 scale)

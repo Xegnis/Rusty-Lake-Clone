@@ -9638,6 +9638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Up and Down Buttons
       objectReference: {fileID: 0}
+    - target: {fileID: 6663281744447169459, guid: d15121e0b6e2c744dba81f54cf38b648, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d15121e0b6e2c744dba81f54cf38b648, type: 3}
 --- !u!224 &7481331301745236087 stripped

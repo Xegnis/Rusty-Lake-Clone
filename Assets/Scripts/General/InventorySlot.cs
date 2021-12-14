@@ -19,12 +19,14 @@ public class InventorySlot : MonoBehaviour{
     **/
     
 
-    public void AddItem(Item newItem){
+    public void AddItem(Item newItem)
+    {
         //Debug.Log(newItem.name);
         item = newItem;
 
         icon.sprite = item.icon;
         icon.enabled = true;
+        iu.PlayPickUp();
         //itemText.text = item.name;
         //removeButton.interactable = true; 
     }
@@ -50,6 +52,7 @@ public class InventorySlot : MonoBehaviour{
         {
             if (item != null)
             {
+                iu.PlaySelected();
                 if (iu.currentSlot != null)
                     iu.currentSlot.GetComponentInChildren<Image>().sprite = iu.normalSpr;
                 iu.currentItem = item;
@@ -65,6 +68,7 @@ public class InventorySlot : MonoBehaviour{
         {
             if (item != null)
             {
+                iu.PlaySelected();
                 iu.currentSlot.GetComponentInChildren<Image>().sprite = iu.normalSpr;
                 iu.currentItem = null;
                 iu.currentSlot = null;
