@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b82c367f9f393c04d863e444f15b4561, type: 3}
   m_Name: Hankyw.Blood
   m_EditorClassIdentifier: 
-  name: Hanky with blood
+  name: hanky with blood
   icon: {fileID: 21300000, guid: 601eeec37fd586d45b292f94b15503d4, type: 3}
   isDefaultItem: 0
